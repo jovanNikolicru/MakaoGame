@@ -24,6 +24,8 @@ public class MakaoKlasa {
 			this.igraci.get(i).dodajKartu(s1.random());
 			this.igraci.get(i).dodajKartu(s1.random());
 			this.igraci.get(i).dodajKartu(s1.random());
+		
+			
 		}
 		
 	}
@@ -38,19 +40,24 @@ public class MakaoKlasa {
 		this.igraci.get(i).print();
 			if(this.indexIgraca==i) {
 				System.out.println();
-				System.out.println("*****************************************************");
+				System.out.println("**********************************************************************");
 			}else {
 					System.out.println();
-					System.out.println("------------------------------------------------------");
+					System.out.println("------------------------------------------------------------------------");
 				}
 			
 			}System.out.println();
 			System.out.println("Poslednja karta je ");
-			for (int ij =0;ij<odigraneKarte.size();ij++) {
+			if (odigraneKarte != null && !odigraneKarte.isEmpty()) {
+				  Karta poslednja = odigraneKarte.get(odigraneKarte.size()-1);
+				 poslednja.print();
+				 System.out.println();
+				}
+			/*for (int ij =0;ij<odigraneKarte.size();ij++) {
 				odigraneKarte.get(ij).print();
 				System.out.println();
 			 
-			}
+			}*/
 	}
 	public boolean krajIgre(){
 		int brojacKarata=0;
@@ -80,16 +87,20 @@ public class MakaoKlasa {
 	public void odigrajKartu (int broj, String znak) {
 		for (int i=0;i<igraci.size();i++) {  
 			for (int j=0; j<this.igraci.get(i).getKarteIgraca().size();j++) {
-			if(this.igraci.get(i).daLiPostojiKarta(broj, znak)==false||
+				for(int z=0;z<odigraneKarte.size();z++) {
+			if(this.igraci.get(i).daLiPostojiKarta(broj, znak)==false&&
 					this.igraci.get(i).getKarteIgraca().get(j).isRegular(broj, znak)==false) {
 					System.out.println("Invalid move");
-				}else {
-					
-				
+				}else if (this.igraci.get(i).getKarteIgraca().get(j).isRegular(broj, znak)==true
+						&&this.igraci.get(i).daLiPostojiKarta(broj, znak)==true) {
+					if (odigraneKarte.get(z).getBroj()==broj||odigraneKarte.get(z).getZnak().equals(znak)) {
 					odigraneKarte.add(this.igraci.get(i).getKarteIgraca().remove(j));
+					}else {
+						this.igraci.get(i).dodajKartu(s1.random());
+					}
 					//this.igraci.get(i).getKarteIgraca().remove(j);
 				}
-				if(broj==7) {
+			/*	if(broj==7) {
 					sledeci();
 					
 					izvuciKartu();
@@ -107,7 +118,7 @@ public class MakaoKlasa {
 					izvuciKartu();
 					sledeci();
 					sledeci();
-				}
+				}*/
 				/*else if (broj==11) {
 					if (this.igraci.get(i).getKarteIgraca().get(i).getBroj()==11) {
 					odigrajKartu(11, znak);
@@ -119,6 +130,7 @@ public class MakaoKlasa {
 				}*/
 			}
 			}
+	}
 	}
 	public void preseciSpil() {
 	Karta presecenaKarta=	this.s1.random();

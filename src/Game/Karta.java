@@ -18,7 +18,7 @@ public class Karta {
 		System.out.print("["+this.broj+" "+this.znak+"]" +" ");
 	}
 	public boolean isRegular(int broj, String znak) {
-		if(this.broj==broj||this.znak.equals(znak)) {
+		if(this.broj==broj&&this.znak.equals(znak)) {
 			return true;
 		}else {
 			return false;
