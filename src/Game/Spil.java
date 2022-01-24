@@ -67,12 +67,7 @@ public class Spil {
 		karte.add(new Karta(14,"pik"));
 	}
 	public Karta random() {
-		/*int index = randomGenerator.nextInt(karte.size());
-        Karta randomKarta = karte.get(index);
-        randomKarta.print();
-        karte.remove(randomKarta);
-	        return randomKarta;*/
-		/*Collections.shuffle(karte);*/
+		
 		Karta k1=null;
 		Random randomMethod = new Random();
 		for (int i = 0; i < karte.size(); i++)  {
@@ -82,10 +77,6 @@ public class Spil {
         } karte.remove(k1);return k1;
         
 		}
-	/*public void print() {
-		for(int i =0;i<karte.size();i++) {
-			System.out.println(this.karte.get(i).getBroj() +" " +this.karte.get(i).getZnak());
-	provera spila	}
-	}*/
+
 	}
 

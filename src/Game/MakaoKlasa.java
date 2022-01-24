@@ -24,36 +24,8 @@ public class MakaoKlasa {
 			this.igraci.get(i).dodajKartu(s1.random());
 			this.igraci.get(i).dodajKartu(s1.random());
 			this.igraci.get(i).dodajKartu(s1.random());
-		/*	this.igraci.get(0).dodajKartu(spilKarata.random());
-			this.igraci.get(0).dodajKartu(spilKarata.random());
-			this.igraci.get(0).dodajKartu(spilKarata.random());
-			this.igraci.get(0).dodajKartu(spilKarata.random());
-			this.igraci.get(0).dodajKartu(spilKarata.random());
-			this.igraci.get(0).dodajKartu(spilKarata.random());
-			sledeci();
-			this.igraci.get(1).dodajKartu(spilKarata.random());
-			this.igraci.get(1).dodajKartu(spilKarata.random());
-			this.igraci.get(1).dodajKartu(spilKarata.random());
-			this.igraci.get(1).dodajKartu(spilKarata.random());
-			this.igraci.get(1).dodajKartu(spilKarata.random());
-			this.igraci.get(1).dodajKartu(spilKarata.random());
-			sledeci();
-			this.igraci.get(2).dodajKartu(spilKarata.random());
-			this.igraci.get(2).dodajKartu(spilKarata.random());
-			this.igraci.get(2).dodajKartu(spilKarata.random());
-			this.igraci.get(2).dodajKartu(spilKarata.random());
-			this.igraci.get(2).dodajKartu(spilKarata.random());
-			this.igraci.get(2).dodajKartu(spilKarata.random());
-			sledeci();
-			this.igraci.get(3).dodajKartu(spilKarata.random());
-			this.igraci.get(3).dodajKartu(spilKarata.random());
-			this.igraci.get(3).dodajKartu(spilKarata.random());
-			this.igraci.get(3).dodajKartu(spilKarata.random());
-			this.igraci.get(3).dodajKartu(spilKarata.random());
-			this.igraci.get(3).dodajKartu(spilKarata.random());*/
-			
 		}
-		// Collections.shuffle(igraci.get(i).s);
+		
 	}
 	public void sledeci() {
 		this.indexIgraca++;

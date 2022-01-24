@@ -118,15 +118,12 @@ public class main {
 */		Scanner s= new Scanner(System.in);
 	Spil s1 = new Spil();
 	MakaoKlasa mk = new MakaoKlasa(s1);
-/*	ArrayList<Igrac>igraci=new ArrayList<>();*/
+
 	Igrac i1 = new Igrac("Jovan");
 	Igrac i2 = new Igrac("Pera");
 	Igrac i3 = new Igrac("Zika");
 	Igrac i4 = new Igrac("Mika");
-	/*igraci.add(i1);
-	igraci.add(i2);
-	igraci.add(i3);
-	igraci.add(i4);*/
+
 	mk.pristupiStolu(i1);
 	mk.pristupiStolu(i2);
 	mk.pristupiStolu(i3);
@@ -140,7 +137,6 @@ public class main {
 		System.out.println("Odigrajte kartu");
 		mk.odigrajKartu(s.nextInt(), s.next());
 		mk.printTrenutnoStanje();
-		
 		mk.sledeci();
 	}
 	

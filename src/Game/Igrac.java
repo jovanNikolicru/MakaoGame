@@ -31,14 +31,7 @@ public class Igrac {
 	public void dodajKartu(Karta karte) {
 		this.karteIgraca.add(karte);
 	}
-	/*public boolean daLiPostojiKarta(int broj, String znak) {
-		for(int i  =0;i<this.karteIgraca.size();i++) {
-			if (this.karteIgraca.get(i).getBroj()==broj&&this.karteIgraca.get(i).getZnak().equals(znak)) {
-				return true;
-			}
-			
-		}return false;
-	}*/
+	
 	public Karta odigrajKartu(int broj, String znak) {
 		Karta odigranaKarta=null;
 		for(int i  =0;i<this.karteIgraca.size();i++) {
